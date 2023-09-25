@@ -1,4 +1,23 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext{
+        fragment_version = '1.6.1'
+        nav_version = '2.7.3'
+        fragment_ktx_version = '1.6.1'
+        coroutinesVersion = '1.7.3'
+        lifecycleVersion = "2.2.0"
+        retrofitVersion = '2.9.0'
+        glideVersion = '4.16.0'
+    }
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.android.tools.build:gradle:3.4.0'
+    }
+}
+
 plugins {
     id 'com.android.application' version '8.0.2' apply false
     id 'com.android.library' version '8.0.2' apply false
